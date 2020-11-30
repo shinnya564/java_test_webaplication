@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+video {
+  width: 100%;
+}
+
+.padding_none{
+  padding: 0px;
+}
+
+/*文字を折り返す*/
+p{
+  font-size: 1em;
+  overflow-wrap: break-word;
+}
+
+/*ページ先頭に戻る設定*/
+#back {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  background-color: #FFFFFF;
+}
+
+.allow{
+  align: right;
+}
+
+/*スライド画像設定*/
+.main1{
+  background-image: url("https://test111111222222.s3-ap-northeast-1.amazonaws.com/store/0d4f7a7837dc9abbe08436f639f0dd5c8f81a0474d63efbcd06c97a29658-min.jpeg")
+}
+
+.main2{
+  background-image: url("https://test111111222222.s3-ap-northeast-1.amazonaws.com/store/0d81c1f1aacd82b1b5a3a6a6c07c6946fd4d0e2c0359c6373400f805ec18-min-min.jpeg")
+}
+
+.logo{
+  max-width: 100%;
+  height: 60rem;
+  background-position: center;
+  background-size: cover;
+}
+
+/*menu設定*/
+.sp-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  min-height: 20px;
+  z-index: 1000;
+}
+
+.sp-menu a{						/*Link_toはアンカーに変わる*/
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu{
+	margin-top: 0px;
+	background-color: #000;
+	text-align: center;
+}
+
+.menu li{
+  width: 250px;
+  padding-right: 30px;
+}
+
+.mymenu{
+  margin-top: 0px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.mymenu li{
+  width: 250px;
+  padding-right: 30px;
+}
+
+.title{
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+/*header設定*/
+header{
+	color: #FFFFFF;
+	background-color: #000000;
+}
+
+.row{
+	margin: 0px;
+}
+
+.welcom{
+    background-color: #000;
+    color: #FFF;
+}
+
+/*間隔*/
+.field{
+  margin-bottom: 10px;
+}
+
+/*map表示用*/
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+/*footer設定*/
+.wrapper{
+  min-height: 100vh;
+  position: relative;/*←相対位置*/
+  padding-bottom: 100px;/*←footerの高さ*/
+  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+
+footer{
+  width: 100%;
+  min-height: 100px;
+	color: #FFFFFF;
+	background-color: #000000;
+  margin-top: 50px;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+}
+
+.inquiry{
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.copylight{
+	margin-top: 10px;
+}
+
+
+/* ========================================================================
+  Media Queries
+======================================================================== */
+
+@media screen and (min-width: 1276px) {
+  .welcom{
+      margin-top: 120px;
+  }
+ }
+
+@media screen and (max-width: 1275px) {
+  .welcom{
+      margin-top: 170px;
+  }
+ }
+
+@media screen and (max-width: 975px) {
+  .welcom{
+      margin-top: 220px;
+  }
+ }
+
+ @media screen and (max-width: 767px) {
+    /* ------------------------- */
+  /* --- ハンバーガーアイコン --- */
+  /* ------------------------- */
+
+  .menu-trigger,
+  .menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+  }
+  .menu-trigger {
+    position: relative;
+    width: 30px;
+    height: 44px;
+  }
+  .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  .menu-trigger span:nth-of-type(1) {
+    top: 10px;
+  }
+  .menu-trigger span:nth-of-type(2) {
+    top: 20px;
+  }
+  .menu-trigger span:nth-of-type(3) {
+    bottom: 10px;
+  }
+  .menu-trigger.active span:nth-of-type(1) {
+    -webkit-transform: translateY(20px) rotate(-45deg);
+    transform: translateY(20px) rotate(-45deg);
+    background-color: #fff;
+  }
+  .menu-trigger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .menu-trigger.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-20px) rotate(45deg);
+    transform: translateY(-20px) rotate(45deg);
+    background-color: #fff;
+  }
+  /* ------------------------ */
+  /* ------ spメニュー ------ */
+  /* ------------------------ */
+  #sp-menu1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    color: #fff;
+    width: 100%;
+    min-height: 100%;
+    display: none;
+    z-index: 9;
+  }
+  #sp-menu1 li{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #sp-menu1 a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .welcom{
+      margin-top: 80px;
+  }
+  .menu{
+    margin-top: 20px;
+  }
+
+  .mymenu li {
+      margin-left: 60px;
+  }
+ }

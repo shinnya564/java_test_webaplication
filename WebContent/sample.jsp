@@ -3,10 +3,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="sample.css">
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Insert title here</title>
 </head>
 <body>
+	<header>
+				<div class="col-xs-12 sp-menu">
+					<div class="col-xs-2 title padding_none">
+						<h1 style="margin: 10px 0px ;"><%= link_to("ECofsake", root_path, data: {"turbolinks" => false}) %></h1>
+					</div>
+					<div class="col-xs-10" id="sp-menu">
+						<ul class="nav navbar-nav menu">
+							<li>test</li>
+						</ul>
+					</div>
+					<div id="hm-icon">
+						<a class="menu-trigger" href="#">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
+					</div>
+				</div>
+	</header>
 		<iframe width=100% height=500em src="https://www.youtube.com/embed/eMWWcJdUzx8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 		<div class="container">
@@ -45,4 +66,3 @@
 		</div>
 </body>
 </html>
-
