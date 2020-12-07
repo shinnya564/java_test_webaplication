@@ -10,23 +10,28 @@
 </head>
 <body>
 	<header>
-				<div class="col-xs-12 sp-menu">
-					<div class="col-xs-2 title padding_none">
-						<h1 style="margin: 10px 0px ;"><%= link_to("ECofsake", root_path, data: {"turbolinks" => false}) %></h1>
-					</div>
-					<div class="col-xs-10" id="sp-menu">
-						<ul class="nav navbar-nav menu">
-							<li>test</li>
-						</ul>
-					</div>
-					<div id="hm-icon">
-						<a class="menu-trigger" href="#">
-							<span></span>
-							<span></span>
-							<span></span>
-						</a>
-					</div>
-				</div>
+    こんにちは、<%= request.getAttribute("userName") %> さん！
+    <form method="post" action="./Hello">
+        名前を入力してください: <input type="text" name="name">
+        <button type="submit">送信</button>
+    </form>
+	<div class="col-xs-12 sp-menu">
+		<div class="col-xs-2 title padding_none">
+			<h1 style="margin: 10px 0px ;"></h1>
+			</div>
+			<div class="col-xs-10" id="sp-menu">
+				<ul class="nav navbar-nav menu">
+					<li>test</li>
+				</ul>
+			</div>
+			<div id="hm-icon">
+				<a class="menu-trigger" href="#">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+			</div>
+		</div>
 	</header>
 		<iframe width=100% height=500em src="https://www.youtube.com/embed/eMWWcJdUzx8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -37,6 +42,7 @@
 					<p>
 						ビール（蘭: bier）(英: beer) は、酒の一種。様々な作り方があるが、主に大麦を発芽させた麦芽（デンプンがアミラーゼという酵素で糖化している）を、ビール酵母によりアルコール発酵させて作る製法が一般的である。現在は炭酸の清涼感とホップの苦味を特徴とするラガー、特にピルスナーが主流となっているが、ラガーはビールの歴史の中では比較的新参であり、ラガー以外にもエールなどの様々な種類のビールが世界で飲まれている。日本語の漢字では麦酒（ばくしゅ）とも表記される
 					</p>
+					<img src="${pageContext.request.contextPath}/pic/ell.jpg" alt="リスト">
 				</section>
 				<section align="right">
 					<h2>ラム</h2><hr>
