@@ -2,6 +2,7 @@ package sample_main;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class sample
  */
-@WebServlet("/sample")
+@WebServlet("/")
 public class sample extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -28,15 +29,21 @@ public class sample extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("test_web_aplication").append(request.getContextPath());
+		request.setAttribute("userName", "Guest");
+		String view = "/WEB-INF/view/sample.jsp";
+	    RequestDispatcher dispatcher = request.getRequestDispatcher(view);
+
+	    dispatcher.forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+	    // formから値を取得
+	    String value = request.getParameter("hoge");
+	    System.out.println(value);
 
+	    doGet(request, response);
+	}
 }
