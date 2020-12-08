@@ -10,11 +10,15 @@
 </head>
 <body>
 	<header>
-    こんにちは、<%= request.getAttribute("userName") %> さん！
-    <form method="post" action="./Hello">
+    <% String userName = (String) request.getAttribute("userName"); %>
+    こんにちは、<%= userName %> さん！
+
+    <% if ("Guest".equals(userName)) { %>
+    <form method="post" action="./">
         名前を入力してください: <input type="text" name="name">
         <button type="submit">送信</button>
     </form>
+    <% } %>
 	<div class="col-xs-12 sp-menu">
 		<div class="col-xs-2 title padding_none">
 			<h1 style="margin: 10px 0px ;"></h1>
